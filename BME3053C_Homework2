@@ -1,0 +1,73 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMRkll1T9ZQSYcZM6PxSPH7",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Lilyexe/bme3053c/blob/main/BME3053C_Homework2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "36hMo_cJATPK",
+        "outputId": "853d430d-8eba-4f07-cd9f-00b329fd05c6"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0.0,\n",
+              " 0.32075471698113206,\n",
+              " 0.5849056603773585,\n",
+              " 0.05660377358490566,\n",
+              " 0.7924528301886793,\n",
+              " 1.0,\n",
+              " 0.1320754716981132,\n",
+              " 0.6415094339622641]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ],
+      "source": [
+        "bp_readings = [120, 137, 151, 123, 162, 173, 127, 154]\n",
+        "\n",
+        "def normalize(bp_readings):\n",
+        "  min_value = min(bp_readings)\n",
+        "  max_value = max(bp_readings)\n",
+        "  normalize = []\n",
+        "  for element in bp_readings:\n",
+        "    normalize.append((element-min_value)/(max_value-min_value))\n",
+        "  return normalize\n",
+        "\n",
+        "normalize(bp_readings)"
+      ]
+    }
+  ]
+}
